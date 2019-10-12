@@ -22,13 +22,13 @@ public class AnimeActivity extends AppCompatActivity {
 
         // Recieve data
 
-        String name  = getIntent().getExtras().getString("anime_name");
-        String description = getIntent().getExtras().getString("anime_description");
-        String studio = getIntent().getExtras().getString("anime_studio") ;
-        String category = getIntent().getExtras().getString("anime_category");
-        int nb_episode = getIntent().getExtras().getInt("anime_nb_episode") ;
-        String rating = getIntent().getExtras().getString("anime_rating") ;
-        String image_url = getIntent().getExtras().getString("anime_img") ;
+        String name  = getIntent().getExtras().getString("name");
+        String description = getIntent().getExtras().getString("Details");
+        String studio = getIntent().getExtras().getString("location") ;
+        String category = getIntent().getExtras().getString("userDesire");
+        int nb_episode = getIntent().getExtras().getInt("age") ;
+        String rating = getIntent().getExtras().getString("bodyType") ;
+        String image_url = getIntent().getExtras().getString("url") ;
 
         // ini views
 

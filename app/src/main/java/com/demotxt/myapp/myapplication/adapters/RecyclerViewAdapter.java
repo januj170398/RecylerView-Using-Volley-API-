@@ -51,13 +51,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
 
                 Intent i = new Intent(mContext, AnimeActivity.class);
-                i.putExtra("anime_name",mData.get(viewHolder.getAdapterPosition()).getName());
-                i.putExtra("anime_description",mData.get(viewHolder.getAdapterPosition()).getDescription());
-                i.putExtra("anime_studio",mData.get(viewHolder.getAdapterPosition()).getStudio());
-                i.putExtra("anime_category",mData.get(viewHolder.getAdapterPosition()).getCategorie());
-                i.putExtra("anime_nb_episode",mData.get(viewHolder.getAdapterPosition()).getNb_episode());
-                i.putExtra("anime_rating",mData.get(viewHolder.getAdapterPosition()).getRating());
-                i.putExtra("anime_img",mData.get(viewHolder.getAdapterPosition()).getImage_url());
+                i.putExtra("name",mData.get(viewHolder.getAdapterPosition()).getName());
+                i.putExtra("Details",mData.get(viewHolder.getAdapterPosition()).getDescription());
+                i.putExtra("location",mData.get(viewHolder.getAdapterPosition()).getStudio());
+                i.putExtra("userDesire",mData.get(viewHolder.getAdapterPosition()).getCategorie());
+                i.putExtra("age",mData.get(viewHolder.getAdapterPosition()).getNb_episode());
+                i.putExtra("bodyType",mData.get(viewHolder.getAdapterPosition()).getRating());
+                i.putExtra("url",mData.get(viewHolder.getAdapterPosition()).getImage_url());
 
                 mContext.startActivity(i);
 

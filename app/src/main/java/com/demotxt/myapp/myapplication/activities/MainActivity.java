@@ -23,7 +23,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String JSON_URL = "https://gist.githubusercontent.com/aws1994/f583d54e5af8e56173492d3f60dd5ebf/raw/c7796ba51d5a0d37fc756cf0fd14e54434c547bc/anime.json" ;
+    private final String JSON_URL = "http://demo8716682.mockable.io/cardData" ;
     private JsonArrayRequest request ;
     private RequestQueue requestQueue ;
     private List<Anime> lstAnime ;
@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
                         jsonObject = response.getJSONObject(i) ;
                         Anime anime = new Anime() ;
                         anime.setName(jsonObject.getString("name"));
-                        anime.setDescription(jsonObject.getString("description"));
-                        anime.setRating(jsonObject.getString("Rating"));
-                        anime.setCategorie(jsonObject.getString("categorie"));
-                        anime.setNb_episode(jsonObject.getInt("episode"));
-                        anime.setStudio(jsonObject.getString("studio"));
-                        anime.setImage_url(jsonObject.getString("img"));
+                        anime.setDescription(jsonObject.getString("Details"));
+                        anime.setRating(jsonObject.getString("bodyType"));
+                        anime.setCategorie(jsonObject.getString("userDesire"));
+                        anime.setNb_episode(jsonObject.getInt("age"));
+                        anime.setStudio(jsonObject.getString("location"));
+                        anime.setImage_url(jsonObject.getString("url"));
                         lstAnime.add(anime);
 
                     } catch (JSONException e) {
